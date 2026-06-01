@@ -17,6 +17,9 @@ server = [
     "uvicorn>=0.48.0",
 ]
 client = [
+    "pandas>=3.0.3",
     "playwright>=1.60.0",
     "playwright-stealth>=2.0.3",
+    "stockstats>=0.6.8",
+    "yfinance>=1.4.1",
 ]
