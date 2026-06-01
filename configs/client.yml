@@ -1,1 +1,7 @@
 server_url: http://localhost:8080
+
+clients:
+  - provider: pocketoption
+    market_names: 
+    - Apple OTC
+    - Microsoft OTC
