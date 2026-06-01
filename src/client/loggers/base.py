@@ -6,27 +6,30 @@
 # store candles that could not be sent to the server, for example when the server is off.
 
 
-class Logger:
+from playwright.async_api import BrowserContext
+
+
+class BaseLogger:
     def __init__(self, target_site: str, server_url: str):
         self.target_site = target_site
         self.server_url = server_url
 
-    def login():
+    async def login(self):
         pass
 
-    def user_login():
+    async def user_login(self):
         """
         Sometimes a human might have to log in to bypass the captchas
         """
         pass
 
-    def save_cookies():
+    async def save_cookies(self, browser_context: BrowserContext):
         pass
 
-    def load_cookies():
+    async def load_cookies(self, browser_context: BrowserContext):
         pass
 
-    def start():
+    async def start():
         """
         Start tracking, connect to the websocket on the server, then continually send candles as they come in to be saved on the servers database
         """
